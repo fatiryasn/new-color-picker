@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="leftNav">
+            <div class="hamMenu"><i class="fas fa-bars"></i></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="colorpicker.html">Color Picker</a></li>
+                    <li>Soon</li>
+                    <li>Soon</li>
+                </ul>
+            </div>
+            <div class="history"><i class="fas fa-book"></i><span>history</span></div>
+            <div class="historyList">
+                <h3>History                 </h3>
+                <div class="lineHistoryCon"></div>
+                <div class="clearCon">
+                    <button class="clear">Clear History</button>
+                </div>
+            </div>  
+        </div>
+        <div class="rightNav">
+            <div class="theme"><i class="fas fa-palette"></i><span>color picker</span></div>
+            <span class="fa fa-user"></span>
+            <div class="displayjs">
+                <div class="ig" id="namaDisplay"></div>
+                <div id="genderDisplay" class="ig two"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div><h2>color: <span class="color">#FFFFFF</span></h2></div>
+        <div class="actions">
+            <button class="random">random hex</button>
+            <button class="copy">copy this hex</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <h1>Hello!</h1>
+        <p>Welcome to my color picker website</p>
+        <p>Lets get started</p>
+        <h2>Fill this field</h2>
+        <form id="biodata">
+          <div class="innercon1">
+            <div class="name">
+              <p>Name</p>
+              <input
+                id="name"
+                type="text"
+                placeholder=" max 1- 12 character"
+                maxlength="12"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="gender">
+              <p>Gender</p>
+              <select id="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="Attack Helicopter">Attack Helicopter</option>
+                <option value="E-male">E-Male</option>
+              </select>
+            </div>
+          </div>
+          <div class="innercon2">
+            <button type="submit">Let's go</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

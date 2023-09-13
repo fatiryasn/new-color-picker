@@ -1,0 +1,291 @@
+body{
+    margin: 0;
+}
+/*navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 10px;
+    flex-direction: row;
+    background-color: rgb(70, 112, 112);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000000;
+}
+.leftNav, .rightNav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.bar{
+    background-color: white;
+    width: 2.5px;
+    height: 35px;
+    display: none;
+}
+.history, .theme, .ig{
+    padding: 10px 20px;
+    margin: 5px 1px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    text-decoration: none;
+    color: white
+}
+.hamMenu{
+    border: solid 2px transparent;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 5px 4px;
+    color: white;
+}
+.displayjs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ig{
+    text-transform: capitalize;
+    padding: 6px 20px 1px 4px;
+    margin-bottom: 0;
+}
+.two{
+    font-family: cursive;
+    padding-top: 0;
+    padding-bottom: 6px;
+    margin-top: 0;
+    font-size: 70%;
+}
+.fa-user{
+    margin-right: 1px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li a{
+    color: white;
+}
+ul{
+    padding: 10px;
+    list-style-type: none;
+}
+li{
+    padding: 20px 1px;
+}
+li:hover{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 0.5em ;
+    cursor: pointer;
+}
+.history:hover, .theme:hover, .ig:hover{
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+}
+.hamMenu, .history, .theme, .ig, .hamMenu:hover, .history:hover, .theme:hover, .ig:hover{
+    transition: 0.3s;
+}
+.hamMenu:hover{
+    border-color: black;
+    background-color: rgb(107, 107, 106);
+    cursor: pointer;
+}
+.history, .theme{
+    text-transform: capitalize;
+}
+.history{
+    margin-right: 5px 3%;
+    user-select: none;
+}
+.fas.fa-book::before, .fas.fa-palette::before, .fab.fa-instagram{
+    padding: 5px;
+}
+
+/*active*/
+.menu{
+    color: white;
+    background-color: rgb(20, 20, 20);
+    position: absolute;
+    left: -100%;
+    top: 45px;
+    height: 92vh;
+    z-index: 10;
+    border-top: solid 2px white;
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+}
+.menu.active{
+    left:0;
+    top: 55px;
+    z-index: 100;
+}
+.menu, .menu.active{
+    transition: 0.3s;
+}
+.historyList{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    top: -10000px;
+    left: 90px;
+    position: absolute;
+    height: 30vh;
+    max-height: 30vh;
+    padding: 5px 20px;
+    color: white;
+    background-color: rgb(70, 112, 112);
+    border: solid 2px white;
+    font-size: smaller;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    z-index: -1;
+}
+.historyList.active{
+    flex-direction: column;
+    top: 45px;
+    left: 90px;
+    z-index: -1;
+}
+.historyList h3{
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+.lineHistoryCon{
+    display: flex;
+    flex-direction: column;;
+    overflow-y: auto;
+    max-height: 20vh;
+    padding: 0 30px;
+    border-radius: 5px;
+    margin: 0px 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgb(70, 112, 112))
+}
+.lineHistoryCon::-webkit-scrollbar{
+    width: 0px;
+}
+.lineHistoryCon:before{
+    content: 'Scroll for more';
+    visibility: hidden;
+    font-size: 80%;
+    font-family: monospace;
+    padding: 0 initial;
+}
+.lineHistoryCon:hover::before{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content:'Scroll for more';
+    visibility: initial;
+    padding: 0 initial;
+    margin: 0;
+    font-size: 80%;
+    font-family: monospace;
+    color: rgb(194, 192, 192);
+}
+p{
+    display: block;
+    padding: 1px 10px;
+    margin: 13px 0px;
+}
+.jsButton{
+    border: solid 1.5px blue;
+    border-radius: 5px;
+    font-family: cursive;
+    font-size: smaller;
+    margin: 1px;
+}
+.jsButton:hover{
+    background-color: rgb(189, 190, 191);
+    border-color: black;
+    cursor: pointer;
+}
+.clear{
+    display: none;
+    top: 235px;
+    left: 100px;
+    font-family: cursive;
+    font-size: smaller;
+    border: solid 1.5px blue;
+    border-radius: 5px;
+    box-shadow: 5px 10px 10px;
+}
+.clear:hover{
+    border-color: black;
+    background-color: rgb(175, 175, 175);
+    cursor: pointer;
+}
+.clear.active{
+    display: flex;
+}
+.clearCon{
+    display: flex;
+    border-top: solid white 1px;
+    padding: 5px 10px;
+    margin: 0;
+}
+
+
+/*main*/
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    flex-direction: column;
+    font-family:cursive;
+}
+h2{
+    text-transform: capitalize;
+}
+.actions{
+    margin: 0 10px;
+}
+.actions button{
+    text-transform: capitalize;
+    border: solid 2px black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 20px;
+    font-family: cursive;
+    font-size: larger;
+}
+.actions button:hover{
+    background-color: rgb(214, 212, 212);
+}
+
+@media (max-width: 575px) {
+    html{
+        font-size: 75%;
+    }
+    .history, .hamMenu{
+        padding: 10px 10px;
+    }
+    .bar{
+        display: block;
+    }
+    .theme{
+        padding: 10px 10px
+    }
+    .historyList.active{
+        left: 30px;
+        height: 20vh;
+    }
+    .clear.active{
+        left: 140px;
+        top: 120px;
+    }
+}
+@media (max-width: 350px){
+    html{
+        font-size: 50%;
+    }
+}
